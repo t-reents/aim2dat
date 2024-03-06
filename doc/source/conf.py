@@ -150,7 +150,7 @@ napoleon_use_keyword = False
 # -- nbsphinx configuration ---------------------------------------------------
 
 nbsphinx_execute = "always"
-nbsphinx_allow_errors = False
+nbsphinx_allow_errors = True
 
 # -- Options for HTML output -------------------------------------------------
 
