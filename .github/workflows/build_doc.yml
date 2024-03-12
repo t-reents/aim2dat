@@ -50,7 +50,7 @@ jobs:
         MP_OPENAPI_KEY: ${{ secrets.MP_OPENAPI_KEY }}
       run: |
         cd doc/
-        make html
+        make clean html
     - name: Init new repo in dist folder and commit generated files
       run: |
         cd doc/build/html/
