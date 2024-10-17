@@ -159,7 +159,9 @@ def _calc_atomic_distance(structure, site_indices1, site_indices2, backfold_posi
     if isinstance(site_indices1, int):
         site_indices1 = [site_indices1]
     if site_indices2 is None:
-        site_indices1, site_indices2 = zip(*itertools.product(site_indices1, site_indices1))
+        site_indices1, site_indices2 = zip(*itertools.combinations(site_indices1, 2))
+        site_indices1 = list(site_indices1)
+        site_indices2 = list(site_indices2)
     elif isinstance(site_indices2, int):
         site_indices2 = [site_indices2]
 
@@ -199,7 +201,9 @@ def _calc_atomic_distance_sc(structure, site_indices1, site_indices2, r_max):
     if isinstance(site_indices1, int):
         site_indices1 = [site_indices1]
     if site_indices2 is None:
-        site_indices1, site_indices2 = zip(*itertools.product(site_indices1, site_indices1))
+        site_indices1, site_indices2 = zip(*itertools.combinations(site_indices1, site_indices1))
+        site_indices1 = list(site_indices1)
+        site_indices2 = list(site_indices2)
     elif isinstance(site_indices2, int):
         site_indices2 = [site_indices2]
 
